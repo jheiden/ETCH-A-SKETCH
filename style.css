@@ -1,0 +1,22 @@
+
+
+#container {
+    display: flex;
+    width: 400px;
+    height: 120px;
+    padding: 0px;
+    background-color: aquamarine;
+    margin: 0x;
+    border: px solid;
+
+}
+
+.divs {
+    border: 1px solid;
+    width: 100px;
+    height: 60px;
+    padding: 0px;
+    background-color: red;
+    margin: 0px;
+
+}
