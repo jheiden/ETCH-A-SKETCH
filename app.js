@@ -1,5 +1,5 @@
 
-/* Create container within global scope. Apply styling. */
+/* Select containerNode within global scope. Apply styling. */
 const container = document.getElementById('container');
     container.style.background = "teal";
     container.style.display = "grid";
@@ -23,11 +23,6 @@ for (let i = 1 ; i <= 256 ; i++) {
     container.appendChild(box);  
 }
 
-// const boxes = document.querySelectorAll(".items"); // Selector for grid items.
-    // boxes.forEach(box => {  forEach takes a CB function as argument..
-        //console.log(box);
-    // });
-
     container.addEventListener('mouseover', (event) => {
         event.target.style.background = "rosybrown";
             // console.log(event.target); // 
@@ -39,26 +34,37 @@ for (let i = 1 ; i <= 256 ; i++) {
           }, 500);
         }, false);
 
+
+/* At click buton removes container (clears grid) and prompts for a number which is sent to function createNew() */
 const button = document.querySelector('button');
         button.addEventListener('click', (e) => { 
             container.remove();
             let numOfItems = parseInt(prompt("enter nr"))
-            creatNew(numOfItems);
+            createNew(numOfItems);
         });
-        
-const creatNew = (aNum) => {
-    console.log(`${aNum}`) // works
-const aNewContainer = document.createElement("div")
+
+    const aNewContainer = document.createElement("div")
     aNewContainer.style.display = "grid";
-    aNewContainer.style.gridTemplateColumns = `repeat(${aNum}, 1fr)`;
+    aNewContainer.style.gridTemplateColumns = "repeat(16, 1fr)";
+    aNewContainer.style.margin = "80 px auto";
+        
+    const createNew = (aNum) => {
+    // aNewContainer.style.gridTemplateColumns = `repeat(${aNum}, 1fr)`;
     aNewContainer.style.maxWidth = "960 px";
     aNewContainer.style.background = "blue";
     document.body.appendChild(aNewContainer);
-
-    
-
+    createGridItems(aNum)
 }
         
+const createGridItems = (aaNum) => {
+    for (i = 1; i <= aaNum; i++) {
+    const box_two = document.createElement('div');
+    box_two.style.background = "green";
+    box_two.style.padding = '20 px';
+    box_two.innerHTML = i;
+    aNewContainer.appendChild(box_two);
+}
+}
         
         
         
