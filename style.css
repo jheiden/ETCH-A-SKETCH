@@ -1,14 +1,19 @@
 body {
     background-color: rosybrown;
-
 }
-
 
 h1 {
     font: 48px Arial-Black;
     text-align: center; 
     border: 1px solid black;
     background: burlywood;
-    
 
+}
+
+button {
+    font: 16px Arial-Black;
+    background:lightgray;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
