@@ -1,6 +1,5 @@
 
 /* Create container within global scope. Apply styling. */
-
 const container = document.getElementById('container');
     container.style.background = "teal";
     container.style.display = "grid";
@@ -10,7 +9,6 @@ const container = document.getElementById('container');
 
 
 /* Create a grid items using for loop. ATT : fixed number.. Append to container. Apply styling to grid items */
-
 for (let i = 1 ; i < 257 ; i++) {
     const box = document.createElement("div");
     box.classList.add("items") // Setting class="items"
@@ -41,15 +39,18 @@ for (let i = 1 ; i < 257 ; i++) {
           }, 500);
         }, false);
 
-
 const button = document.querySelector('button');
         button.addEventListener('click', (e) => { 
             container.remove();
             let numOfItems = parseInt(prompt("enter nr"))
             console.log(typeof numOfItems);
-
         });
         
+const creatNew = (aNum) => {
+
+
+
+}
         
         
         
