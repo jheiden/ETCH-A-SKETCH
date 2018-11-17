@@ -3,13 +3,13 @@
 const container = document.getElementById('container');
     container.style.background = "teal";
     container.style.display = "grid";
-    container.style.gridTemplateColumns = "repeat(16, 1fr";
+    container.style.gridTemplateColumns = "repeat(16, 1fr)";
     container.style.maxWidth = "960px";
     container.style.margin = "80 auto"; //Margin vertical = 80 px, horizontal = auto;
 
 
 /* Create a grid items using for loop. ATT : fixed number.. Append to container. Apply styling to grid items */
-for (let i = 1 ; i < 257 ; i++) {
+for (let i = 1 ; i <= 256 ; i++) {
     const box = document.createElement("div");
     box.classList.add("items") // Setting class="items"
     box.innerHTML = i;
@@ -43,12 +43,19 @@ const button = document.querySelector('button');
         button.addEventListener('click', (e) => { 
             container.remove();
             let numOfItems = parseInt(prompt("enter nr"))
-            console.log(typeof numOfItems);
+            creatNew(numOfItems);
         });
         
 const creatNew = (aNum) => {
+    console.log(`${aNum}`) // works
+const aNewContainer = document.createElement("div")
+    aNewContainer.style.display = "grid";
+    aNewContainer.style.gridTemplateColumns = `repeat(${aNum}, 1fr)`;
+    aNewContainer.style.maxWidth = "960 px";
+    aNewContainer.style.background = "blue";
+    document.body.appendChild(aNewContainer);
 
-
+    
 
 }
         
